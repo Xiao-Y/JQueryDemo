@@ -8,6 +8,8 @@
 <script type="text/javascript">
 	$().ready(function(){
 		$("li[title=love]").css("color", "red");//选择li中属性title的值为love的
+		$("li[title!=love]").css("color","#60F")//选择li中属性title的值不为love的
+		$("li[title*=l]").css("background-color","yellow");//选择li中属性title的值含有‘l’的
 	});
 </script>
 
@@ -17,8 +19,8 @@
 	<h2>attribute 属性选择器</h2>
 	<ul id="ul">
 		<li title="love">苹果</li>
-		<li>香蕉</li>
-		<li>桔子</li>
+		<li title="lii">香蕉</li>
+		<li title="ii">桔子</li>
 		<li title="love">葡萄</li>
 	</ul>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+
+<script type="text/javascript">
+	$().ready(function(){
+		$("li:last-child").css("color", "red");//选取每一个元素的最后一个（是一个集合）
+	});
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>:last-child 选择每一个元素的最后一个</h2>
+	<ul id="ul">
+		<li>苹果1</li>
+		<li>香蕉1</li>
+		<li>桔子1</li>
+		<li>葡萄1</li>
+	</ul>
+	<ul id="ul">
+		<li>苹果2</li>
+		<li>香蕉2</li>
+		<li>桔子2</li>
+		<li>葡萄2</li>
+	</ul>
+</body>
+</html>

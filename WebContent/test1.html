@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./jquery-1.8.0.min.js"></script>
+
+<script type="text/javascript">
+	$().ready(function(){
+		$(".a").click(function(){
+			var $a = $(this).text();
+			if($a == '更多'){
+				$(this).html("简化");
+				$("li").show();
+			}else{
+				$(this).html("更多")
+				$(".hd").hide();
+			}
+		});
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		初始时:&ltu&gt元素中仅显示5个&ltli&gt元素,其中包含还包括最后一个&ltli&gt元素,&lta&gt元素中的显示"更多"字符.<br>
+  		当点击"更多"链接时,自身内容变为"简化",同时,&ltul&gt元素中显示全部的&ltli&gt元素.<br>
+  		当点击"简化"链接时,自身内容变为"更多",同时,&ltul&gt元素中仅显示包含最后一个&ltli&gt元素在内的5个元素.<br>
+	</div>
+	
+	<p><p><p><p>
+	<ul>
+		<li>1</li>
+		<li style="display: none" class="hd">2</li>
+		<li>3</li>
+		<li style="display: none" class="hd">4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+		<a class="a">更多</a>
+</body>
+</html>

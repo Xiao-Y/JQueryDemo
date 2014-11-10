@@ -4,3 +4,12 @@
 [attribute=value]属性选择器
 	属性选择器的功能是获取与属性名和属性值完全相同的全部元素，其中[]是专用于属性选择器的括号符，参数attribute表示属性名称，value参数表示属性值。
 	
+[attribute!=value]属性选择器
+	与上一节介绍的[attribute=value]属性选择器正好相反，[attribute!=value]属性选择器的功能是获取不包含属性名，
+	或者与属性名和属性值不相同的全部元素，其中[]是专用于属性选择器的括号符，参数attribute表示属性名称，value参数表示属性值。
+	
+[attribute*=value]属性选择器
+	属性选择器[attribute*=value]，它可以获取属性值中包含指定内容的全部元素，其中[]是专用于属性选择器的括号符，
+	参数attribute表示属性名称，value参数表示对应的属性值。
+
+	
