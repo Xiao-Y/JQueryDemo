@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+
+<script type="text/javascript">
+	$().ready(function(){
+		$("li:has('p')").css("color", "red");//选定元素下元素为p的
+	});
+</script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>:has 包含指定的元素</h2>
+	<ul>
+		<li><p>苹果</p></li>
+		<li><label>p香蕉</label></li>
+		<li><p>桔子</p></li>
+		<li><label>p葡萄</label></li>
+	</ul>
+</body>
+</html>
