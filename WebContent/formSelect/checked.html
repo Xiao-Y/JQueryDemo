@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<style type="text/css">
+	
+.red{
+		border:1px solid red;
+		background: white;
+	}
+</style>
+	<script type="text/javascript">
+		$().ready(function(){
+			$("#imform :checked").hide();
+		});
+	</script>
+
+<title>:checked 表单选择器(选中状态，如复选框、单选按钮元素)</title>
+</head>
+<body>
+	<h2>:checked 表单选择器(选中状态，如复选框、单选按钮元素)</h2>
+	<form id="imform" action="">
+		<input type="checkbox" checked="checked">1<br>
+		<input type="checkbox">2<br>
+		<input type="checkbox" disabled="disabled">3<br>
+		<br>
+		<input type="radio" checked="checked">4<br>
+		<input type="radio">5<br>
+		<input type="radio" disabled="disabled">6<br>
+	</form>
+	<div>
+		使用:checked选择器可以获取处于选中状态的元素，并调用hide()方法将它们进行隐藏。
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>:selected 表单选择器(获得select中选中状态)</title>
+</head>
+<body>
+	<h2>:selected 表单选择器(获得select中选中状态)</h2>
+	<form id="imform" action="">
+		<select multiple="multiple">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2" selected="selected">2</option>
+			<option value="3">3</option>
+			<option value="4" selected="selected">4</option>
+		</select>
+	</form>
+	<div>
+		用:selected选择器获取处于选中状态的&ltoption&gt元素，并调用text()方法修改这些选中状态元素显示的内容。
+	</div>
+	
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+	<script type="text/javascript">
+	$().ready(function(){
+		$("#imform :selected").text("我是选种的..");
+	});
+</script>
+</body>
+</html>

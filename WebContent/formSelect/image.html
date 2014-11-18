@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<style type="text/css">
+	
+.red{
+		border:3px solid red;
+	}
+</style>
+	<script type="text/javascript">
+		$().ready(function(){
+			$("#imform :image").addClass("red");
+		});
+	</script>
+
+<title>:image 表单选择器</title>
+</head>
+<body>
+	<h2>:image 表单选择器（选取input中属性为image）</h2>
+	<form id="imform" action="">
+		<input type="image" src="../image/yh_gg.jpg"><br><br>
+		<img alt="" src="../image/yh_gg.jpg">
+		<p></p>
+	</form>
+	<div>
+		从图中可以看出，使用:image选择器只能获取&ltinput&gt图像域，而不能获取&ltimg&gt格式的图像元素。
+	</div>
+	
+</body>
+</html>
