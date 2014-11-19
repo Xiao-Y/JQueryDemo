@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<title> 特色功能</title>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		WdatePicker({eCont:'div',onpicked:function(dp){alert('你选择的日期是:'+$dp.cal.getDateStr())}})
+	</script>
+	
+	<br><br>
+	支持多种容器:<br>
+	除了可以将值返回给input以外,还可以通过配置el属性将值返回给其他的元素(如:textarea,div,span)等,带有innerHTML属性的HTML元素<br>
+	<img alt="" src="../My97DatePicker/skin/datePicker.gif" onclick="WdatePicker({el:'sp'})" height="22" width="16" align="absmiddle" style="cursor:pointer">
+	<span id="sp"></span><br><br>
+	
+	
+	起始日期功能<br>
+	注意:日期格式必须与 realDateFmt 和 realTimeFmt 一致而不是与 dateFmt 一致<br>
+	有时在项目中需要选择生日之类的日期,而默认点开始日期都是当前日期,导致年份选择非常麻烦,<br>
+	你可以通过起始日期功能加上配置alwaysUseStartDate属性轻松解决此类问题<br>
+	示例2-3-1 起始日期简单应用:
+	<input type="text" onclick="WdatePicker({startDate:'1991-12-23'})"><br>
+	默认的起始日期为 1980-05-01<br>
+	当日期框为空值时,将使用 1980-05-01 做为起始日期 <br><br>
+	
+	
+	示例2-3-2 alwaysUseStartDate属性应用:
+	<input type="text" onclick="WdatePicker({startDate:'1991-12-23',alwaysUseStartDate:true})" class="Wdate"><br>
+	默认的起始日期为 1980-05-01<br>
+	当日期框无论是何值,始终使用 1980-05-01 做为起始日期 <br><br>
+	
+	示例2-3-3 使用内置参数<br>
+	除了使用静态的日期值以外,还可以使用动态参数(如:%y,%M分别表示当前年和月)<br>
+	下例演示,年月日使用当年当月的1日,时分秒使用00:00:00作为起始时间<br>
+	<input type="text" onclick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})" class="Wdate">
+	<br><br>
+	
+	示例 2-4-1: 年月日时分秒<br>
+	<input type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日 HH点mm分ss秒'})" class="Wdate" style="width:220px"><br><br>
+	
+	
+	示例 2-4-2 时分秒<br>
+	<input type="text" onclick="WdatePicker({dateFmt:'HH点mm分ss秒',skin:'whyGreen'})" class="Wdate"><br>
+	使用了皮肤(skin)属性,所以你会看到一个不同的皮肤<br><br>
+	
+	
+	示例 2-4-3 年月<br>
+	<input type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月',skin:'whyGreen'})" class="Wdate"><br><br>
+	
+	
+	示例 2-4-4 取得系统可识别的日期值(重要)<br>
+	类似于 1999年7月5日 这样的日期是不能够被系统识别的,他必须转换为能够识别的类型如 1999-07-05 <br>
+	<input type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日',vel:'v'})" class="Wdate">其实真实值为<input type="text" id="v"><br>
+	注意:在实际应用中,一般会把vel指定为一个hidden控件,这里是为了把真实值展示出来,所以使用文本框<br>
+	关键属性: vel 指定一个控件或控件的ID,必须具有value属性(如input),用于存储真实值(也就是realDateFmt和realTimeFmt格式化后的值)<br><br>
+	
+	
+	示例 2-4-5 星期, 月 日, 年<br>
+	<input type="text" id="d245" onfocus="WdatePicker({dateFmt:'DD, MMMM d, yyyy'})" class="Wdate" style="width:220px" /><br><br>
+	
+	
+	 双月日历功能<br>
+	<input type="text" onclick="WdatePicker({doubleCalendar:true,dateFmt:'yyyy-MM-dd'})"><br>
+	注意:双月日历一般只用于包含年月日三个元素的场景,另外设置该属性时,autoPickDate自动设置为true<br><br>
+	
+	
+	为编程带来方便<br><br>
+
+	如果el的值是this,可省略,即所有的el:this都可以不写<br>
+	日期框设置为disabled时,禁止更改日期(不弹出选择框)<br>
+	如果没有定义onpicked事件,自动触发文本框的onchange事件<br>
+	如果没有定义oncleared事件,清空时,自动触发onchange事件<br>
+	
+	其他属性<br><br>
+	
+	设置readOnly属性,可指定日期框是否只读<br>
+	设置highLineWeekDay属性,可指定是否高亮周末<br>
+	设置isShowOthers属性,可指定是否显示其他月的日期<br>
+	加上class="Wdate"就会在选择框右边出现日期图标<br>
+	 
+	<br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

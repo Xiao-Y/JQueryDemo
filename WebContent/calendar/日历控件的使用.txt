@@ -1,0 +1,77 @@
+添加My97DatePicker文件夹：
+
+1.在使用该日期控件的文件中加入JS库(仅这一个文件即可,其他文件会自动引入,请勿删除或改名), 代码如下：
+	<script language="javascript" type="text/javascript" src="datepicker/WdatePicker.js"></script>
+	注:src="datepicker/WdatePicker.js" 请根据你的实际情况改变路径
+
+2. 加上主调函数 WdatePicker
+	<input class="Wdate" type="text" onClick="WdatePicker()">
+	
+	
+1. 配置全局默认值
+
+    通过配置WdatePicker.js的属性可以避免每次调用都传入配置值,为变成带来很多方便.
+    在默认情况下My97为每个属性都配置了默认值,这些默认值都可以在WdatePicker.js中修改的
+    你可以根据你个人的喜好更改这些值
+
+    比如你比较不喜欢默认的皮肤default 而更喜欢 whyGreen 这个皮肤,
+    你可以直接在WdatePicker.js把skin值改为 whyGreen
+    这样,你就不必每次调用控件的时候都传入 skin:'whyGreen' 了
+    你学会了吗?
+    配置单个控件
+
+    在控件里面你可以使用 onfocus 或 onclick 事件来调用WdatePicker函数来触发日期控件
+    WdatePicker({})其中{}中的内容都是只对当前实例有效,你可以任意配置属性表里有的所有属性
+    你可以随意的组合这些属性,达到你的需求
+    My97日期控件在这方面是做得非常灵活的.
+    多套配置快速切换
+
+    您可以设置多个WdatePicker.js文件,如 cn_WdatePicker.js,en_WdatePicker.js,simple_WdatePicker.js等
+    在不同的页面引入不同的 WdatePicker.js 达到配置快速切换的目的.
+    注意:文件必须以 _WdatePicker.js(大小写不限制) 为后缀,形如 <yourname>_WdatePicker.js
+
+2. 语言配置
+
+    语言列表
+
+    My97DatePicker目录下有个config.js(4.8以后在WdatePicker.js中),里面有段代码:
+    var langList =
+    [
+    {name:'en', charset:'UTF-8'},
+    {name:'zh-cn', charset:'gb2312'},
+    {name:'zh-tw', charset:'GBK'}
+    ];
+
+    这就是语言列表,每个项有name和charset两个属性.
+    name 表示语言的名称(必须与浏览器的语言字符串命名相同),在配置的时候,lang属性只能是配置列表里面已有的项,否则将自动返回第一项
+    charset 表示对应语言目录下的js文件所对应的编码格式
+    语言安装说明
+
+    分两步轻松实现:
+    1 将语言文件拷贝到 lang 目录
+    2 打开 config.js 配置语言列表
+
+3. 皮肤配置
+
+    皮肤列表
+
+    My97DatePicker目录下有个config.js(4.8以后在WdatePicker.js中),里面有段代码:
+    var skinList =
+    [
+    {name:'default', charset:'gb2312'},
+    {name:'whyGreen', charset:'gb2312'},
+    {name:'blue', charset:'gb2312'},
+    {name:'simple', charset:'gb2312'}
+    ];
+
+    这就是皮肤列表,每个项有name和charset两个属性.
+    name 表示皮肤的名称,在配置的时候,skin属性只能是配置列表里面已有的项,否则将自动返回第一项
+    charset 表示对应皮肤目录下的css文件:datepicker.css所对应的编码格式
+    皮肤安装说明
+
+    分两步轻松实现:
+    1 将皮肤文件包拷贝到 skin 目录
+    2 打开 config.js 配置皮肤列表
+
+    注意:安装过多的皮肤会影响性能,一般只安装自己使用的皮肤,3个以下比较适宜
+	

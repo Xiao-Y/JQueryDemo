@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<title>常规功能</title>
+</head>
+<body>
+	示例1-1-1 常规调用:<input type="text"  id="c"><br><br>
+	<script type="text/javascript">
+		$(function(){
+			$("#c").click(function(){
+				WdatePicker();
+			});
+		});
+	</script>
+	
+	
+	示例1-1-2 图标触发:<input class="Wdate" type="text" onClick="WdatePicker()"><br><br>
+	
+	
+	示例1-2-1 周显示简单应用 :<input type="text" onClick="WdatePicker({isShowWeek:true})">(日历旁边会出现第几周)<br><br>
+	
+	
+	示例1-2-2 利用onpicked事件把周赋值给另外的文本框:<br>
+	<input type="text" id="c1" class="Wdate">您选择了<input type="text" id="c1_1">周 (W格式)，<input type="text" id="c1_2">周（WW格式）。<br><br>
+	<script type="text/javascript">
+		$(function(){
+			$("#c1").click(function(){
+				WdatePicker({
+					isShowWeek:true,
+					onpicked:function(){
+						$("#c1_1").val($dp.cal.getP('W','W'));
+						$("#c1_2").val($dp.cal.getP('W','WW'));
+					}
+				});
+			});
+		});
+	</script>
+	
+	
+	只读开关,高亮周末功能 :
+	<input class="Wdate" type="text" onclick="WdatePicker({readOnly:true,highLineWeekDay:false})"><br>
+		readOnly:true表示只能选择不能手动输入，默认为true。<br>
+		highLineWeekDay:false表示日历中周末不高亮。默认为ture<br><br>
+	
+	
+	示例1-5 禁用清空功能:<input type="text" class="Wdate" onclick="WdatePicker({readOnly:true,isShowClear:false})"><br>
+	最好把readOnly置为true,否则即使隐藏了清空按钮,用户依然可以在输入框里把值delete掉<br><br>
+	
+	
+	自定义弹出位置:当控件处在页面边界时,它会自动选择显示的位置.此外你还可以使用position参数对弹出位置做调整.<br>
+	使用position属性指定,弹出日期的坐标为{left:100,top:50}
+	<input type="text" class="Wdate" onclick="WdatePicker({position:{left:100,top:50}})"><br><br>
+	
+	
+	自定义星期的第一天:<br>
+	各个国家的习惯不同,有些喜欢以星期日作为第一天,有些以星期一作为第一天.<br>
+	相关属性:firstDayOfWeek: 可设置 0 - 6 的任意一个数字,0:星期日 1:星期一 以此类推<br>
+	<input type="text" class="Wdate" onclick="WdatePicker({firstDayOfWeek:1})"><br><br>
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
