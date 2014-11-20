@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<style type="text/css">
+	.red
+	{
+		border: 2px solid black;
+		background: #FF44FF;
+		width: 150px;
+		height: 40px;
+		font-size: 24px;
+		line-height: 40px;
+	}
+	.green
+	{
+		border: 2px solid #00EC00;
+		width: 200px;
+		height: 80px;
+	}
+</style>
+<title></title>
+</head>
+<body>
+	<div class="red">
+		<span id="a">我是绿美猴王</span>
+	</div>
+	<input type="button" value="wrap" class="wrap"><br><br><br><br><br>
+	
+	<span id="b">我是绿美猴王</span>
+	<input type="button" value="wrapInner" class="wrapInner" >
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".wrap").click(function(){
+				var str = "<div class='green'></div>"
+				$("#a").wrap(str);//用于包裹元素本身
+				$(".wrap").attr("disabled","disabled");
+			});
+		});
+		
+		$(function(){
+			$(".wrapInner").click(function(){
+				var str = "<i></i>"
+				$("#b").wrapInner(str);//包裹元素中的内容
+				$(".wrapInner").attr("disabled","disabled");
+			});
+		});
+	</script>
+</body>
+</html>

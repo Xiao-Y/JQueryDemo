@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<style type="text/css">
+	.red
+	{
+		background:red;
+		border:1px solid black;
+		width: 160px;
+		height: 90px;
+	}
+	
+	.green
+	{
+		background:green;
+		border:1px solid black;
+		width: 160px;
+		height: 90px;
+	}
+	
+	.d
+	{
+		border:2px solid black;
+		width: 150px;
+		height: 50px;
+	}
+</style>
+
+<title>动态追加</title>
+</head>
+<body>
+	<h3>动态追加 append</h3>
+	<div id="s">我是静态的：</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#s").append("动态追加");
+		});
+	</script>
+	<br><br><br>
+	
+	<div class="d">
+		<span class="green">小乌龟</span>
+	</div>
+	<span class="red">小青蛙</span>
+	<script type="text/javascript">
+		$(function(){
+			$(".red").appendTo(".d");
+		});
+	</script>
+	
+	<br><br><br>
+	
+	<span id="before">，我们来交个朋友吧！</span>
+	<script type="text/javascript">
+		$(function(){
+			$("#before").before("土豪");
+		});
+	</script>
+	
+	<br><br><br>
+	
+	<span id="after">我们来交个朋友吧，</span>
+	<script type="text/javascript">
+		$(function(){
+			$("#after").after("土豪！");
+		});
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

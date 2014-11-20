@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+<style type="text/css">
+	.green
+	{
+		border: 2px solid black;
+		background: #28FF28;
+		width: 150px;
+		height: 40px;
+		font-size: 24px;
+		line-height: 40px;
+	}
+	.red
+	{
+		border: 2px solid black;
+		background: #FF44FF;
+		width: 150px;
+		height: 40px;
+		font-size: 24px;
+		line-height: 40px;
+	}
+</style>
+<title></title>
+</head>
+<body>
+	<div class="green" id="a">
+		<span>我是绿美猴王</span>
+	</div>
+	<input type="button" value="replaecWith替换" class="replaecWith"><br>
+	
+	<div class="green" id="b">
+		<span>我是绿美猴王</span>
+	</div>
+	<input type="button" value="replaecAll替换" class="replaecAll">
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".replaecWith").click(function(){
+				var str = "<div class='red'><span>我是红美猴王</span></div>"
+				$("#a").replaceWith(str);
+			});
+		});
+		
+		$(function(){
+			$(".replaecAll").click(function(){
+				var str = "<div class='red'><span>我是红美猴王</span></div>"
+				$(str).replaceAll("#b");
+			});
+		});
+	</script>
+</body>
+</html>

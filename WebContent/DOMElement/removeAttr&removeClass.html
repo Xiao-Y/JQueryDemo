@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<script type="text/javascript" src="../jquery-1.8.0.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $href = $("a").attr("href");
+			$("#s").html($href);
+			$("a").click(function(){
+				$(this).removeAttr("href");
+			});
+		});		
+	</script>
+	<style type="text/css">
+		.blue{
+			background:blue;
+		}
+		.red{
+			background:red;
+		}
+		
+		.white{
+			width: 260px;
+			height: 30px;
+			border:3px solid black;
+		}
+	</style>
+<title>removeAttr&removeClass</title>
+</head>
+<body>
+	<a href="127.0.0.1">点我就走</a>
+	<div>
+		我要去的地方是：<span id="s"></span>
+	</div>
+	
+	<div id="b" class="blue white">点击我，我脱就去蓝外衣</div><br>
+	<div id="r" class="red white">点击我，我脱就去红外衣</div>
+	<script type="text/javascript">
+		$("#b").click(function(){
+			$(this).removeClass("blue white");//移除多个用空格隔开
+		});
+		
+		$("#r").click(function(){
+			$(this).removeAttr("class");
+		});
+	</script>
+</body>
+</html>
